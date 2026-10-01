@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DESI MILK WALA | Fresh Milk • Home Delivery | Siliguri</title>
+  
+  <!-- Google Fonts (Inter + DM Serif Display for premium FMCG typography) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: {
+              50: '#FAF8F5',
+              100: '#F5F0E8',
+              200: '#EADFCF',
+              300: '#DFCDB5',
+              400: '#CEB896',
+            },
+            forest: {
+              700: '#2D6A4F',
+              800: '#1B4332',
+              900: '#143628',
+              950: '#0B241A',
+            },
+            charcoal: {
+              800: '#2D312E',
+              900: '#1A1C1B',
+            },
+            mustard: {
+              500: '#D97706',
+              600: '#B45309',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['"DM Serif Display"', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Subtle, slow organic background ambient gradient */
+    @keyframes subtleDrift {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    .ambient-bg {
+      background: linear-gradient(135deg, #FAF8F5 0%, #F5F0E8 45%, #F7F3EC 75%, #FAF8F5 100%);
+      background-size: 240% 240%;
+      animation: subtleDrift 30s ease-in-out infinite;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .ambient-bg {
+        animation: none;
+        background-position: 0% 0%;
+      }
+    }
+
+    /* Keep uploaded assets completely static */
+    img {
+      transform: none !important;
+      transition: none !important;
+      animation: none !important;
+    }
+
+    /* Clean modal backdrop */
+    .glass-backdrop {
+      background: rgba(11, 36, 26, 0.4);
+      backdrop-filter: blur(4px);
+    }
+  </style>
+</head>
+<body class="ambient-bg text-charcoal-900 font-sans antialiased selection:bg-forest-800 selection:text-white">
+
+  <header class="sticky top-0 z-40 bg-cream-50/95 backdrop-blur-md border-b border-cream-200">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
+      <!-- Left: Official Uploaded Brand Logo -->
+      <a href="#hero" class="flex items-center gap-2" aria-label="DESI MILK WALA Home">
+        <img 
+          src="MILK WALA (1).png" 
+          alt="DESI MILK WALA Official Logo" 
+          class="h-12 sm:h-14 w-auto object-contain block"
+          loading="eager"
+        />
+      </a>
+
+      <!-- Center: Minimal Nav (Desktop) -->
+      <nav class="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-semibold text-charcoal-800">
+        <a href="#hero" class="hover:text-forest-800 transition-colors">Home</a>
+        <a href="#our-milk" class="hover:text-forest-800 transition-colors">Our Milk</a>
+        <a href="#journey" class="hover:text-forest-800 transition-colors">Journey</a>
+        <a href="#delivery-section" class="hover:text-forest-800 transition-colors">Delivery Areas</a>
+        <a href="#how-it-works" class="hover:text-forest-800 transition-colors">How It Works</a>
+        <a href="#contact" class="hover:text-forest-800 transition-colors">Contact</a>
+      </nav>
+
+      <!-- Right: Main CTA Button -->
+      <div class="flex items-center gap-3">
+        <button 
+          onclick="scrollToOrderForm()" 
+          class="bg-forest-800 hover:bg-forest-900 text-white font-bold text-xs sm:text-sm tracking-wide uppercase px-4 sm:px-6 py-2.5 sm:py-3 rounded-full shadow-md hover:shadow-lg transition-colors cursor-pointer"
+        >
+          ORDER NOW
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section id="hero" class="py-8 sm:py-14 md:py-18 px-4 sm:px-6 border-b border-cream-200">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+      
+      <!-- Hero Copy Column -->
+      <div class="lg:col-span-7 flex flex-col justify-center text-left">
+        <!-- Brand line -->
+        <div class="inline-flex items-center gap-2 mb-3">
+          <span class="inline-block w-2.5 h-2.5 rounded-full bg-forest-800"></span>
+          <span class="text-xs sm:text-sm font-extrabold tracking-widest uppercase text-forest-800">
+            FARM → HOME
+          </span>
+          <span class="text-xs text-charcoal-800 font-semibold">• Fresh Milk • Home Delivery</span>
+        </div>
+
+        <!-- Main Headlines -->
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-serif font-normal text-forest-950 leading-[1.12] mb-3">
+          YOUR MILK HAS A JOURNEY.
+        </h1>
+        <h2 class="text-xl sm:text-2xl lg:text-3xl font-serif text-forest-800 mb-6">
+          FROM LOCAL FARMERS TO YOUR HOME.
+        </h2>
+
+        <!-- Value Highlight Pill -->
+        <p class="text-sm sm:text-base text-charcoal-800 mb-8 max-w-xl leading-relaxed">
+          Pure, unadulterated cow milk collected fresh every morning from verified local dairy farmers in Siliguri and delivered directly in chilled, sanitized glass bottles.
+        </p>
+
+        <!-- CTA Button Group -->
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 max-w-md">
+          <button 
+            onclick="scrollToOrderForm()" 
+            class="flex-1 bg-forest-800 hover:bg-forest-900 text-white font-bold text-center text-sm uppercase tracking-wider py-4 px-6 rounded-xl shadow-md transition-colors cursor-pointer"
+          >
+            ORDER NOW
+          </button>
+          
+          <button 
+            onclick="openDirectWhatsApp()" 
+            class="flex-1 bg-cream-100 hover:bg-cream-200 border-2 border-forest-800 text-forest-900 font-bold text-center text-sm uppercase tracking-wider py-3.5 px-6 rounded-xl transition-colors inline-flex items-center justify-center gap-2 cursor-pointer"
+          >
+            <!-- WhatsApp Icon -->
+            <svg class="w-5 h-5 fill-current text-forest-800" viewBox="0 0 24 24">
+              <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+            </svg>
+            <span>ORDER ON WHATSAPP</span>
+          </button>
+        </div>
+
+        <!-- Trust Badges -->
+        <div class="mt-6 pt-6 border-t border-cream-200/80 grid grid-cols-3 gap-2 text-center sm:text-left">
+          <div>
+            <div class="text-xs font-bold text-forest-900 uppercase">100% Pure</div>
+            <div class="text-[11px] text-charcoal-800/80">Raw Cow Milk</div>
+          </div>
+          <div>
+            <div class="text-xs font-bold text-forest-900 uppercase">Glass Bottle</div>
+            <div class="text-[11px] text-charcoal-800/80">Eco-Friendly & Chilled</div>
+          </div>
+          <div>
+            <div class="text-xs font-bold text-forest-900 uppercase">Morning Delivery</div>
+            <div class="text-[11px] text-charcoal-800/80">Siliguri Service Hub</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Product Asset Column -->
+      <div class="lg:col-span-5 flex justify-center items-center">
+        <div class="w-full max-w-sm sm:max-w-md bg-cream-100 rounded-3xl p-4 sm:p-6 border border-cream-200 shadow-sm flex flex-col items-center text-center">
+          <div class="relative w-full overflow-hidden rounded-2xl bg-white/70 p-2 border border-cream-200">
+            <img 
+              src="ChatGPT Image Aug 29, 2026, 01_28_31 AM.png" 
+              alt="DESI MILK WALA Pure Raw Cow Milk Glass Bottle" 
+              class="w-full h-auto max-h-[460px] object-contain mx-auto rounded-xl block"
+              loading="eager"
+            />
+          </div>
+          <div class="mt-4 flex items-center justify-between w-full px-2">
+            <span class="text-xs font-bold uppercase tracking-wider text-forest-900">Official Packaging</span>
+            <span class="text-xs font-bold text-forest-800 bg-cream-200/80 px-2.5 py-1 rounded-md">500 mL & 1 L Available</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="our-milk" class="py-12 sm:py-16 px-4 sm:px-6 border-b border-cream-200 bg-white/40">
+    <div class="max-w-6xl mx-auto">
+      
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <span class="text-xs font-extrabold uppercase tracking-widest text-forest-800">Direct From Village Farms</span>
+        <h2 class="text-3xl sm:text-4xl font-serif text-forest-950 mt-1 mb-2">OUR MILK</h2>
+        <p class="text-sm sm:text-base text-charcoal-800">
+          Fresh Milk • Home Delivery in sterilized reusable glass bottles.
+        </p>
+      </div>
+
+      <div class="max-w-4xl mx-auto bg-cream-50 rounded-3xl border border-cream-300 shadow-sm p-6 sm:p-8 grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+        
+        <!-- Product Image -->
+        <div class="md:col-span-5 flex justify-center">
+          <div class="w-full max-w-[280px] bg-white rounded-2xl p-3 border border-cream-200 shadow-xs">
+            <img 
+              src="ChatGPT Image Aug 29, 2026, 01_28_31 AM.png" 
+              alt="DESI MILK WALA Fresh Milk Product" 
+              class="w-full h-auto max-h-[380px] object-contain mx-auto rounded-lg block"
+            />
+          </div>
+        </div>
+
+        <!-- Product Details & Quantity Picker -->
+        <div class="md:col-span-7 flex flex-col justify-between">
+          <div>
+            <div class="inline-block bg-forest-800 text-white text-[11px] font-extrabold uppercase tracking-widest px-3 py-1 rounded-full mb-3">
+              PURE RAW COW MILK
+            </div>
+            <h3 class="text-2xl sm:text-3xl font-serif text-forest-950 mb-2">FRESH MILK</h3>
+            <p class="text-xs sm:text-sm font-semibold text-forest-800 uppercase tracking-wide mb-4">
+              Fresh Milk • Home Delivery • Natural Fat & Malai
+            </p>
+            <p class="text-sm text-charcoal-800 leading-relaxed mb-6">
+              Naturally sweet, thick, and unprocessed. No milk powders, no synthetic preservatives, and zero hormones. Chilled immediately post milking for complete purity.
+            </p>
+
+            <!-- Pack Size Selector -->
+            <div class="mb-6">
+              <label class="block text-xs font-bold uppercase tracking-wider text-charcoal-800 mb-2">
+                Select Pack Size
+              </label>
+              <div class="grid grid-cols-2 gap-3" id="pack-size-container">
+                <button 
+                  type="button" 
+                  onclick="selectPackSize('500 mL')"
+                  id="btn-pack-500"
+                  class="py-3 px-4 rounded-xl border-2 border-forest-800 bg-cream-100 font-bold text-forest-950 text-sm flex items-center justify-between shadow-xs transition-colors cursor-pointer"
+                >
+                  <span>500 mL Bottle</span>
+                  <span class="text-xs bg-forest-800 text-white px-2 py-0.5 rounded">Standard</span>
+                </button>
+
+                <button 
+                  type="button" 
+                  onclick="selectPackSize('1 L')"
+                  id="btn-pack-1000"
+                  class="py-3 px-4 rounded-xl border border-cream-300 bg-white font-bold text-charcoal-800 hover:border-forest-800 text-sm flex items-center justify-between transition-colors cursor-pointer"
+                >
+                  <span>1 L Bottle</span>
+                  <span class="text-xs text-charcoal-800 bg-cream-200 px-2 py-0.5 rounded">Family</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Quantity Selector -->
+            <div class="mb-6 flex items-center justify-between bg-white p-3 rounded-xl border border-cream-200">
+              <div>
+                <span class="block text-xs font-bold uppercase tracking-wider text-charcoal-800">Quantity</span>
+                <span class="text-xs text-charcoal-800/80">Number of bottles daily</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <button 
+                  type="button" 
+                  onclick="updateProductQty(-1)" 
+                  class="w-9 h-9 rounded-lg bg-cream-100 hover:bg-cream-200 text-forest-900 font-bold text-lg flex items-center justify-center border border-cream-300 cursor-pointer"
+                  aria-label="Decrease quantity"
+                >−</button>
+                <span id="product-quantity-display" class="w-8 text-center font-bold text-lg text-forest-950">1</span>
+                <button 
+                  type="button" 
+                  onclick="updateProductQty(1)" 
+                  class="w-9 h-9 rounded-lg bg-cream-100 hover:bg-cream-200 text-forest-900 font-bold text-lg flex items-center justify-center border border-cream-300 cursor-pointer"
+                  aria-label="Increase quantity"
+                >+</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Order Trigger Button -->
+          <button 
+            onclick="syncAndNavigateToOrder()" 
+            class="w-full bg-forest-800 hover:bg-forest-900 text-white font-bold text-sm uppercase tracking-wider py-4 rounded-xl shadow-md transition-colors cursor-pointer"
+          >
+            ORDER NOW
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="journey" class="py-12 sm:py-16 px-4 sm:px-6 border-b border-cream-200">
+    <div class="max-w-6xl mx-auto">
+      
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <span class="text-xs font-extrabold uppercase tracking-widest text-forest-800">Authentic Sourcing</span>
+        <h2 class="text-3xl sm:text-4xl font-serif text-forest-950 mt-1 mb-2">YOUR MILK HAS A JOURNEY.</h2>
+        <p class="text-sm sm:text-base font-semibold text-forest-800">FROM LOCAL FARMERS TO YOUR HOME.</p>
+      </div>
+
+      <!-- 4-Stage Visual Journey Track -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        
+        <!-- Step 1 -->
+        <div class="bg-cream-100/90 rounded-2xl p-5 border border-cream-300 text-center flex flex-col items-center">
+          <div class="w-12 h-12 rounded-full bg-forest-800 text-white flex items-center justify-center font-serif text-lg font-bold mb-3 shadow-xs">
+            1
+          </div>
+          <h3 class="text-sm font-bold uppercase tracking-wider text-forest-950 mb-1">LOCAL FARMERS</h3>
+          <p class="text-xs text-charcoal-800 leading-relaxed">
+            Ethically sourced from registered rural smallholders who nourish local cows on natural green fodder.
+          </p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="bg-cream-100/90 rounded-2xl p-5 border border-cream-300 text-center flex flex-col items-center">
+          <div class="w-12 h-12 rounded-full bg-forest-800 text-white flex items-center justify-center font-serif text-lg font-bold mb-3 shadow-xs">
+            2
+          </div>
+          <h3 class="text-sm font-bold uppercase tracking-wider text-forest-950 mb-1">MILK COLLECTION</h3>
+          <p class="text-xs text-charcoal-800 leading-relaxed">
+            Collected twice a day in sterilized food-grade stainless steel cans immediately post morning milking.
+          </p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="bg-cream-100/90 rounded-2xl p-5 border border-cream-300 text-center flex flex-col items-center">
+          <div class="w-12 h-12 rounded-full bg-forest-800 text-white flex items-center justify-center font-serif text-lg font-bold mb-3 shadow-xs">
+            3
+          </div>
+          <h3 class="text-sm font-bold uppercase tracking-wider text-forest-950 mb-1">QUALITY CHECK</h3>
+          <p class="text-xs text-charcoal-800 leading-relaxed">
+            Tested for purity, lactometer density, and natural fat levels. Zero water addition and zero adulteration.
+          </p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="bg-cream-100/90 rounded-2xl p-5 border border-cream-300 text-center flex flex-col items-center">
+          <div class="w-12 h-12 rounded-full bg-forest-800 text-white flex items-center justify-center font-serif text-lg font-bold mb-3 shadow-xs">
+            4
+          </div>
+          <h3 class="text-sm font-bold uppercase tracking-wider text-forest-950 mb-1">HOME DELIVERY</h3>
+          <p class="text-xs text-charcoal-800 leading-relaxed">
+            Chilled, sealed in sanitized glass bottles, and delivered right to your doorstep before your morning chai.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Supporting Farm -> Home Banner -->
+      <div class="mt-8 bg-forest-900 text-cream-50 rounded-2xl p-4 sm:p-5 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+        <div class="flex items-center gap-3">
+          <span class="text-2xl">🥛</span>
+          <div>
+            <div class="text-sm font-extrabold uppercase tracking-wider text-white">FARM → HOME</div>
+            <div class="text-xs text-cream-200">Siliguri's Trusted Local Farm Milk Source</div>
+          </div>
+        </div>
+        <button 
+          onclick="scrollToOrderForm()" 
+          class="bg-cream-50 hover:bg-cream-100 text-forest-950 text-xs font-bold uppercase px-5 py-2.5 rounded-xl transition-colors cursor-pointer"
+        >
+          Check My Delivery Area
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="delivery-section" class="py-12 sm:py-16 px-4 sm:px-6 border-b border-cream-200 bg-cream-100/50">
+    <div class="max-w-4xl mx-auto">
+      
+      <div class="text-center mb-8">
+        <span class="text-xs font-extrabold uppercase tracking-widest text-forest-800">Quick Availability Check</span>
+        <h2 class="text-3xl sm:text-4xl font-serif text-forest-950 mt-1 mb-2">CHECK DELIVERY AVAILABILITY</h2>
+        <p class="text-sm text-charcoal-800">
+          Enter your 6-digit postal PIN code to verify service in your area.
+        </p>
+      </div>
+
+      <!-- Checker Card -->
+      <div class="bg-white rounded-2xl sm:rounded-3xl p-6 sm:p-8 border border-cream-300 shadow-sm max-w-xl mx-auto">
+        <form onsubmit="handlePinCheck(event)" class="space-y-4">
+          <div>
+            <label for="pincode-input" class="block text-xs font-bold uppercase tracking-wider text-charcoal-800 mb-2">
+              Enter PIN Code
+            </label>
+            <div class="flex flex-col sm:flex-row gap-2">
+              <input 
+                type="text" 
+                id="pincode-input" 
+                name="pincode" 
+                maxlength="6" 
+                pattern="[0-9]{6}" 
+                placeholder="e.g. 734001, 734004" 
+                class="flex-1 px-4 py-3 rounded-xl border border-cream-300 bg-cream-50 text-base font-semibold text-charcoal-900 focus:outline-none focus:ring-2 focus:ring-forest-800"
+                required
+              />
+              <button 
+                type="submit" 
+                class="bg-forest-800 hover:bg-forest-900 text-white font-bold text-xs uppercase tracking-wider px-6 py-3 rounded-xl transition-colors shrink-0 cursor-pointer"
+              >
+                CHECK AVAILABILITY
+              </button>
+            </div>
+          </div>
+        </form>
+
+        <!-- Dynamic PIN Response Container -->
+        <div id="pin-result" class="mt-4 hidden p-4 rounded-xl border text-sm font-semibold"></div>
+      </div>
+
+      <!-- DELIVERY AREAS SELECTION & HUB DISPLAY -->
+      <div class="mt-10 max-w-3xl mx-auto">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="text-sm font-bold uppercase tracking-wider text-forest-950 flex items-center gap-2">
+            <span>DELIVERY AREAS</span>
+            <span class="text-[11px] font-normal text-charcoal-800 bg-cream-200/80 px-2 py-0.5 rounded-full">
+              Siliguri Service Network
+            </span>
+          </h3>
+          <span class="text-xs text-charcoal-800 font-medium">Click area to select</span>
+        </div>
+
+        <!-- Area Chips Grid (Populated from BRAND_CONFIG) -->
+        <div id="delivery-areas-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          <!-- Populated by JavaScript -->
+        </div>
+
+        <p class="text-xs text-center text-charcoal-800/80 mt-4">
+          PIN code availability takes priority during order confirmation.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="how-it-works" class="py-12 sm:py-16 px-4 sm:px-6 border-b border-cream-200">
+    <div class="max-w-6xl mx-auto">
+      
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <span class="text-xs font-extrabold uppercase tracking-widest text-forest-800">Simple Process</span>
+        <h2 class="text-3xl sm:text-4xl font-serif text-forest-950 mt-1 mb-2">HOW IT WORKS</h2>
+        <p class="text-sm sm:text-base text-charcoal-800">
+          Four effortless steps to pure farm milk at your doorstep.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Step 1 -->
+        <div class="bg-cream-50 p-6 rounded-2xl border border-cream-200 shadow-xs flex flex-col justify-between">
+          <div>
+            <span class="text-xs font-extrabold text-forest-800 uppercase tracking-widest block mb-2">Step 1</span>
+            <h3 class="text-lg font-bold text-forest-950 mb-2">CHOOSE YOUR MILK</h3>
+            <p class="text-xs text-charcoal-800 leading-relaxed">
+              Select your required pack size (500 mL or 1 L) and the number of bottles you need each morning.
+            </p>
+          </div>
+          <div class="mt-4 pt-4 border-t border-cream-200 text-xs font-semibold text-forest-800">
+            500 mL / 1 L Options
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="bg-cream-50 p-6 rounded-2xl border border-cream-200 shadow-xs flex flex-col justify-between">
+          <div>
+            <span class="text-xs font-extrabold text-forest-800 uppercase tracking-widest block mb-2">Step 2</span>
+            <h3 class="text-lg font-bold text-forest-950 mb-2">ENTER YOUR DELIVERY DETAILS</h3>
+            <p class="text-xs text-charcoal-800 leading-relaxed">
+              Provide your delivery address, PIN code, and landmark so our local delivery rider can easily find you.
+            </p>
+          </div>
+          <div class="mt-4 pt-4 border-t border-cream-200 text-xs font-semibold text-forest-800">
+            Instant Area Check
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="bg-cream-50 p-6 rounded-2xl border border-cream-200 shadow-xs flex flex-col justify-between">
+          <div>
+            <span class="text-xs font-extrabold text-forest-800 uppercase tracking-widest block mb-2">Step 3</span>
+            <h3 class="text-lg font-bold text-forest-950 mb-2">ORDER ON WHATSAPP</h3>
+            <p class="text-xs text-charcoal-800 leading-relaxed">
+              Your details automatically generate a clean WhatsApp order message. No password or payment hassles.
+            </p>
+          </div>
+          <div class="mt-4 pt-4 border-t border-cream-200 text-xs font-semibold text-forest-800">
+            One-Tap Dispatch
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="bg-cream-50 p-6 rounded-2xl border border-cream-200 shadow-xs flex flex-col justify-between">
+          <div>
+            <span class="text-xs font-extrabold text-forest-800 uppercase tracking-widest block mb-2">Step 4</span>
+            <h3 class="text-lg font-bold text-forest-950 mb-2">START YOUR MILK DELIVERY</h3>
+            <p class="text-xs text-charcoal-800 leading-relaxed">
+              We confirm your order on WhatsApp and start delivering fresh raw cow milk in chilled glass bottles.
+            </p>
+          </div>
+          <div class="mt-4 pt-4 border-t border-cream-200 text-xs font-semibold text-forest-800">
+            Doorstep Freshness
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="order-form-section" class="py-12 sm:py-16 px-4 sm:px-6 border-b border-cream-200 bg-white/40">
+    <div class="max-w-3xl mx-auto">
+      
+      <div class="text-center mb-8">
+        <span class="text-xs font-extrabold uppercase tracking-widest text-forest-800">Direct Order</span>
+        <h2 class="text-3xl sm:text-4xl font-serif text-forest-950 mt-1 mb-2">ORDER YOUR MILK</h2>
+        <p class="text-sm text-charcoal-800">
+          Fill your delivery information below to send your pre-formatted order directly on WhatsApp.
+        </p>
+      </div>
+
+      <div class="bg-cream-50 rounded-3xl p-6 sm:p-10 border border-cream-300 shadow-sm">
+        <form id="orderForm" onsubmit="handleOrderSubmit(event)" class="space-y-5">
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <!-- Customer Name -->
+            <div>
+              <label for="cust-name" class="block text-xs font-bold uppercase tracking-wider text-charcoal-800 mb-1.5">
+                Customer Name <span class="text-red-600">*</span>
+              </label>
+              <input 
+                type="text" 
+                id="cust-name" 
+                name="name" 
+                placeholder="Full Name" 
+                required 
+                class="w-full px-3.5 py-2.5 rounded-xl border border-cream-300 bg-white text-sm font-semibold text-charcoal-900 focus:outline-none focus:ring-2 focus:ring-forest-800"
+              />
+            </div>
+
+            <!-- Mobile Number -->
+            <div>
+              <label for="cust-mobile" class="block text-xs font-bold uppercase tracking-wider text-charcoal-800 mb-1.5">
+                Mobile Number <span class="text-red-600">*</span>
+              </label>
+              <input 
+                type="tel" 
+                id="cust-mobile" 
+                name="mobile" 
+                placeholder="10-digit Mobile Number" 
+                pattern="[0-9]{10}" 
+                required 
+                class="w-full px-3.5 py-2.5 rounded-xl border border-cream-300 bg-white text-sm font-semibold text-charcoal-900 focus:outline-none focus:ring-2 focus:ring-forest-800"
+              />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <!-- PIN Code -->
+            <div>
+              <label for="cust-pin" class="block text-xs font-bold uppercase tracking-wider text-charcoal-800 mb-1.5">
+                Delivery PIN Code <span class="text-red-600">*</span>
+              </label>
+              <input 
+                type="text" 
+                id="cust-pin" 
+                name="pincode" 
+                placeholder="6-digit PIN code" 
+                maxlength="6" 
+                required 
+                oninput="syncPinWithArea(this.value)"
+                class="w-full px-3.5 py-2.5 rounded-xl border border-cream-300 bg-white text-sm font-semibold text-charcoal-900 focus:outline-none focus:ring-2 focus:ring-forest-800"
+              />
+              <div id="form-pin-feedback" class="text-[11px] font-semibold mt-1"></div>
+            </div>
+
+            <!-- Selected Delivery Area -->
+            <div>
+              <label for="cust-area" class="block text-xs font-bold uppercase tracking-wider text-charcoal-800 mb-1.5">
+                Delivery Locality / Area <span class="text-red-600">*</span>
+              </label>
+              <select 
+                id="cust-area" 
+                name="area" 
+                required 
+                onchange="handleAreaDropdownChange(this.value)"
+                class="w-full px-3.5 py-2.5 rounded-xl border border-cream-300 bg-white text-sm font-semibold text-charcoal-900 focus:outline-none focus:ring-2 focus:ring-forest-800"
+              >
+                <!-- Populated via BRAND_CONFIG -->
+              </select>
+            </div>
+          </div>
+
+          <!-- Full Address -->
+          <div>
+            <label for="cust-address" class="block text-xs font-bold uppercase tracking-wider text-charcoal-800 mb-1.5">
+              Full Delivery Address <span class="text-red-600">*</span>
+            </label>
+            <textarea 
+              id="cust-address" 
+              name="address" 
+              rows="2" 
+              placeholder="Flat/House No., Building Name, Street / Road" 
+              required 
+              class="w-full px-3.5 py-2.5 rounded-xl border border-cream-300 bg-white text-sm font-semibold text-charcoal-900 focus:outline-none focus:ring-2 focus:ring-forest-800"
+            ></textarea>
+          </div>
+
+          <!-- Landmark -->
+          <div>
+            <label for="cust-landmark" class="block text-xs font-bold uppercase tracking-wider text-charcoal-800 mb-1.5">
+              Landmark
+            </label>
+            <input 
+              type="text" 
+              id="cust-landmark" 
+              name="landmark" 
+              placeholder="Nearby school, temple, hospital or market" 
+              class="w-full px-3.5 py-2.5 rounded-xl border border-cream-300 bg-white text-sm font-semibold text-charcoal-900 focus:outline-none focus:ring-2 focus:ring-forest-800"
+            />
+          </div>
+
+          <!-- Milk Pack Size & Quantity summary in form -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 p-4 bg-cream-100 rounded-2xl border border-cream-200">
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-charcoal-800 mb-1">
+                Milk Pack Size
+              </label>
+              <div class="flex gap-2">
+                <button 
+                  type="button" 
+                  onclick="selectPackSize('500 mL')"
+                  id="form-pack-500" 
+                  class="flex-1 py-2 px-3 rounded-lg border-2 border-forest-800 bg-white text-xs font-bold text-forest-950 cursor-pointer"
+                >
+                  500 mL
+                </button>
+                <button 
+                  type="button" 
+                  onclick="selectPackSize('1 L')"
+                  id="form-pack-1000" 
+                  class="flex-1 py-2 px-3 rounded-lg border border-cream-300 bg-cream-50 text-xs font-bold text-charcoal-800 cursor-pointer"
+                >
+                  1 L
+                </button>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-charcoal-800 mb-1">
+                Number of Bottles
+              </label>
+              <div class="flex items-center justify-between bg-white px-3 py-1.5 rounded-lg border border-cream-300">
+                <span class="text-xs font-semibold text-charcoal-800">Daily Count:</span>
+                <div class="flex items-center gap-2">
+                  <button 
+                    type="button" 
+                    onclick="updateProductQty(-1)" 
+                    class="w-7 h-7 rounded bg-cream-100 text-forest-900 font-bold flex items-center justify-center cursor-pointer"
+                  >−</button>
+                  <span id="form-quantity-display" class="font-bold text-sm text-forest-950 w-6 text-center">1</span>
+                  <button 
+                    type="button" 
+                    onclick="updateProductQty(1)" 
+                    class="w-7 h-7 rounded bg-cream-100 text-forest-900 font-bold flex items-center justify-center cursor-pointer"
+                  >+</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Optional Notes -->
+          <div>
+            <label for="order-notes" class="block text-xs font-bold uppercase tracking-wider text-charcoal-800 mb-1.5">
+              Optional Notes
+            </label>
+            <input 
+              type="text" 
+              id="order-notes" 
+              name="notes" 
+              placeholder="e.g. Leave in bag at gate / Call before ringing doorbell / Alternate days" 
+              class="w-full px-3.5 py-2.5 rounded-xl border border-cream-300 bg-cream-50 text-sm font-semibold text-charcoal-900 focus:outline-none focus:ring-2 focus:ring-forest-800"
+            />
+          </div>
+
+          <!-- Submit Order on WhatsApp Button -->
+          <div class="pt-2">
+            <button 
+              type="submit" 
+              class="w-full bg-forest-800 hover:bg-forest-900 text-white font-extrabold text-sm uppercase tracking-wider py-4 rounded-xl shadow-md transition-colors flex items-center justify-center gap-2 cursor-pointer"
+            >
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+              </svg>
+              <span>ORDER ON WHATSAPP</span>
+            </button>
+            <p class="text-[11px] text-center text-charcoal-800/70 mt-2">
+              Opens WhatsApp with your pre-filled details. No manual retyping required.
+            </p>
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="whatsapp-qr" class="py-12 sm:py-16 px-4 sm:px-6 border-b border-cream-200">
+    <div class="max-w-4xl mx-auto">
+      
+      <div class="bg-forest-950 text-cream-50 rounded-3xl p-6 sm:p-10 border border-forest-900 shadow-md">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+          
+          <!-- Text and Action Details -->
+          <div class="md:col-span-7 space-y-4 text-center md:text-left">
+            <span class="inline-block text-xs font-extrabold uppercase tracking-widest text-cream-300 bg-forest-900 px-3 py-1 rounded-full">
+              DIRECT WHATSAPP DESK
+            </span>
+            <h2 class="text-2xl sm:text-3xl lg:text-4xl font-serif text-white">
+              ORDER ON WHATSAPP
+            </h2>
+            <p class="text-sm text-cream-200 leading-relaxed">
+              Order your milk directly on WhatsApp. Whether you want to start a daily morning bottle or ask about deliveries in your colony, message our direct line.
+            </p>
+
+            <div class="pt-2">
+              <a 
+                href="https://wa.me/919832232718?text=Hello%20DESI%20MILK%20WALA%2C%20I%20would%20like%20to%20order%20milk.%20Please%20share%20the%20available%20options." 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="inline-flex items-center justify-center gap-2 bg-cream-50 hover:bg-white text-forest-950 font-extrabold text-sm uppercase px-6 py-3.5 rounded-xl shadow-xs transition-colors"
+              >
+                <svg class="w-5 h-5 fill-current text-forest-800" viewBox="0 0 24 24">
+                  <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
+                </svg>
+                <span>MESSAGE +91 9832232718</span>
+              </a>
+            </div>
+            
+            <p class="text-xs text-cream-300/80">
+              WhatsApp: +91 9832232718 • Siliguri, West Bengal
+            </p>
+          </div>
+
+          <!-- Uploaded QR Code Display -->
+          <div class="md:col-span-5 flex flex-col items-center justify-center">
+            <div class="bg-white p-4 rounded-2xl shadow-lg border border-cream-200 text-center max-w-[210px] w-full">
+              <span class="block text-[11px] font-extrabold uppercase tracking-wider text-forest-900 mb-2">
+                SCAN TO ORDER
+              </span>
+              <img 
+                src="qr code.jpeg" 
+                alt="DESI MILK WALA WhatsApp QR Code" 
+                class="w-full h-auto aspect-square object-contain mx-auto rounded-lg block"
+              />
+              <span class="block text-[10px] font-semibold text-charcoal-800 mt-2">
+                Scan with phone camera or WhatsApp
+              </span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="contact" class="py-12 sm:py-16 px-4 sm:px-6 border-b border-cream-200 bg-cream-100/40">
+    <div class="max-w-4xl mx-auto text-center">
+      <span class="text-xs font-extrabold uppercase tracking-widest text-forest-800">Fresh Cow Milk Daily</span>
+      <h2 class="text-3xl sm:text-5xl font-serif text-forest-950 mt-1 mb-3">
+        START YOUR MILK DELIVERY
+      </h2>
+      <p class="text-base text-charcoal-800 font-medium mb-6">
+        Fresh Milk • Home Delivery • Pure Farm Quality
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 max-w-md mx-auto">
+        <button 
+          onclick="openDirectWhatsApp()" 
+          class="w-full sm:w-auto bg-forest-800 hover:bg-forest-900 text-white font-bold text-sm uppercase px-8 py-4 rounded-xl shadow-md transition-colors cursor-pointer"
+        >
+          ORDER ON WHATSAPP
+        </button>
+        <a 
+          href="tel:9832232718" 
+          class="w-full sm:w-auto bg-white hover:bg-cream-50 border border-cream-300 text-forest-900 font-bold text-sm uppercase px-8 py-3.5 rounded-xl transition-colors inline-flex items-center justify-center gap-2"
+        >
+          <!-- Call Icon -->
+          <svg class="w-4 h-4 fill-current text-forest-800" viewBox="0 0 24 24">
+            <path d="M20 15.5c-1.25 0-2.45-.2-3.57-.57a1.02 1.02 0 0 0-1.02.24l-2.2 2.2a15.045 15.045 0 0 1-6.59-6.59l2.2-2.21a.96.96 0 0 0 .25-1A11.36 11.36 0 0 1 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.5c0-.55-.45-1-1-1zM19 12h2a9 9 0 0 0-9-9v2c3.87 0 7 3.13 7 7zm-4 0h2c0-2.76-2.24-5-5-5v2c1.66 0 3 1.34 3 3z"/>
+          </svg>
+          <span>CALL NOW</span>
+        </a>
+      </div>
+
+      <div class="mt-6 text-xs font-bold text-forest-900">
+        Helpline: +91 9832232718
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-10 px-4 sm:px-6 bg-cream-50">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+      
+      <!-- Brand & Official Logo -->
+      <div class="flex flex-col sm:flex-row items-center gap-4">
+        <img 
+          src="MILK WALA (1).png" 
+          alt="DESI MILK WALA Official Logo" 
+          class="h-12 w-auto object-contain block"
+        />
+        <div>
+          <div class="text-sm font-extrabold text-forest-950 uppercase">DESI MILK WALA</div>
+          <div class="text-xs font-bold text-forest-800">FARM → HOME</div>
+          <div class="text-xs text-charcoal-800">Fresh Milk • Home Delivery</div>
+        </div>
+      </div>
+
+      <!-- Contact Details -->
+      <div class="text-xs text-charcoal-800 space-y-1">
+        <div><strong>City:</strong> Siliguri, West Bengal</div>
+        <div><strong>Primary Service Hub:</strong> College Para, Court More</div>
+        <div><strong>WhatsApp / Phone:</strong> +91 9832232718</div>
+      </div>
+
+      <!-- Copyright -->
+      <div class="text-[11px] text-charcoal-800/70">
+        &copy; <span id="current-year"></span> DESI MILK WALA. All rights reserved.
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    /* ============================================================
+       CENTRALIZED EDITABLE CONFIGURATION (DESI MILK WALA)
+    ============================================================ */
+    const BRAND_CONFIG = {
+      brandName: "DESI MILK WALA",
+      tagline: "FARM → HOME",
+      phone: "9832232718",
+      whatsappNumber: "919832232718",
+      city: "Siliguri",
+      state: "West Bengal",
+      
+      // Serviceable locations in Siliguri
+      deliveryAreas: [
+        { 
+          name: "College Para, Court More", 
+          pincode: "734001", 
+          active: true, 
+          isMainHub: true, 
+          badge: "PRIMARY SERVICE HUB" 
+        },
+        { 
+          name: "Pradhan Nagar", 
+          pincode: "734004", 
+          active: true, 
+          isMainHub: false 
+        },
+        { 
+          name: "Hakim Para", 
+          pincode: "734007", 
+          active: true, 
+          isMainHub: false 
+        },
+        { 
+          name: "Sevoke Road", 
+          pincode: "734003", 
+          active: true, 
+          isMainHub: false 
+        },
+        { 
+          name: "Deshbandhu Para", 
+          pincode: "734006", 
+          active: true, 
+          isMainHub: false 
+        },
+        // Inactive areas kept strictly internal; not shown to customers
+        { 
+          name: "Khalpara", 
+          pincode: "734005", 
+          active: false 
+        }
+      ]
+    };
+
+    // State Variables
+    let selectedPack = "500 mL";
+    let productQuantity = 1;
+    let formQuantity = 1;
+
+    // Set Copyright Year
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    /* ============================================================
+       RENDER ACTIVE DELIVERY AREAS & POPULATE FORM DROPDOWN
+    ============================================================ */
+    function renderDeliveryAreas() {
+      const grid = document.getElementById('delivery-areas-grid');
+      const dropdown = document.getElementById('cust-area');
+      
+      // Filter strictly active/serviceable areas for the public view
+      const activeAreas = BRAND_CONFIG.deliveryAreas.filter(area => area.active);
+
+      if (grid) {
+        grid.innerHTML = activeAreas.map(area => {
+          const isHub = area.isMainHub;
+          return `
+            <button 
+              type="button" 
+              onclick="selectDeliveryArea('${area.name}', '${area.pincode}')"
+              id="area-card-${area.pincode}"
+              class="w-full text-left p-3.5 rounded-xl border transition-colors cursor-pointer flex flex-col justify-between ${
+                isHub 
+                  ? 'bg-cream-100/90 border-forest-800 ring-1 ring-forest-800/40 shadow-xs' 
+                  : 'bg-white border-cream-300 hover:border-forest-700'
+              }"
+            >
+              <div class="flex items-start justify-between gap-1 mb-1.5">
+                <span class="text-xs font-bold text-forest-950">${area.name}</span>
+                <span class="inline-flex items-center gap-1 text-[10px] font-extrabold uppercase px-1.5 py-0.5 rounded ${
+                  isHub ? 'bg-forest-800 text-white' : 'bg-emerald-100 text-emerald-800'
+                }">
+                  ${isHub ? '★ MAIN HUB' : 'Available'}
+                </span>
+              </div>
+              <div class="flex items-center justify-between text-[11px] text-charcoal-800/80">
+                <span>PIN: <strong>${area.pincode}</strong></span>
+                <span class="text-[10px] font-semibold text-forest-800">Select &rarr;</span>
+              </div>
+            </button>
+          `;
+        }).join('');
+      }
+
+      if (dropdown) {
+        dropdown.innerHTML = `
+          <option value="" disabled selected>Select Your Locality</option>
+          ${activeAreas.map(area => `
+            <option value="${area.name}" data-pin="${area.pincode}">
+              ${area.name} (PIN ${area.pincode})${area.isMainHub ? ' — [PRIMARY SERVICE HUB]' : ''}
+            </option>
+          `).join('')}
+        `;
+      }
+    }
+
+    /* ============================================================
+       PIN CODE CHECKER & FORM SYNC BEHAVIOR
+    ============================================================ */
+    function handlePinCheck(event) {
+      event.preventDefault();
+      const pinInput = document.getElementById('pincode-input');
+      const resultBox = document.getElementById('pin-result');
+      const pin = pinInput.value.trim();
+
+      const matchedArea = BRAND_CONFIG.deliveryAreas.find(
+        area => area.pincode === pin && area.active
+      );
+
+      resultBox.classList.remove('hidden');
+
+      if (matchedArea) {
+        resultBox.className = "mt-4 p-4 rounded-xl border border-emerald-500 bg-emerald-50 text-emerald-950";
+        resultBox.innerHTML = `
+          <div class="flex items-center gap-2 mb-1">
+            <span class="text-base">✓</span>
+            <span class="font-bold">YES, WE DELIVER HERE!</span>
+          </div>
+          <p class="text-xs font-medium text-emerald-900">
+            ${matchedArea.name} (PIN ${matchedArea.pincode}) is in our active route.
+            ${matchedArea.isMainHub ? '<strong class="block mt-0.5 text-forest-900">★ Located at our PRIMARY SERVICE HUB.</strong>' : ''}
+          </p>
+          <button 
+            type="button" 
+            onclick="selectDeliveryArea('${matchedArea.name}', '${matchedArea.pincode}', true)" 
+            class="mt-2.5 inline-block text-xs font-bold text-white bg-forest-800 hover:bg-forest-900 px-3.5 py-1.5 rounded-lg shadow-xs cursor-pointer"
+          >
+            Apply to Order Form &darr;
+          </button>
+        `;
+        // Pre-fill the form automatically
+        syncPinWithArea(pin);
+      } else {
+        resultBox.className = "mt-4 p-4 rounded-xl border border-cream-300 bg-cream-100 text-charcoal-900";
+        resultBox.innerHTML = `
+          <div class="font-bold text-forest-950 mb-1">
+            DELIVERY IS NOT AVAILABLE IN THIS PIN CODE YET.
+          </div>
+          <p class="text-xs text-charcoal-800">
+            We currently deliver to College Para (Court More), Pradhan Nagar, Hakim Para, Sevoke Road, and Deshbandhu Para in Siliguri.
+          </p>
+        `;
+      }
+    }
+
+    // Auto-detect area when typing PIN in order form
+    function syncPinWithArea(enteredPin) {
+      const pin = (enteredPin || '').trim();
+      const areaDropdown = document.getElementById('cust-area');
+      const feedback = document.getElementById('form-pin-feedback');
+
+      if (pin.length < 6) {
+        if (feedback) feedback.textContent = '';
+        return;
+      }
+
+      const match = BRAND_CONFIG.deliveryAreas.find(
+        area => area.pincode === pin && area.active
+      );
+
+      if (match) {
+        if (areaDropdown) areaDropdown.value = match.name;
+        if (feedback) {
+          feedback.className = "text-[11px] font-bold text-forest-800 mt-1";
+          feedback.textContent = `✓ Available: ${match.name} ${match.isMainHub ? '(MAIN HUB)' : ''}`;
+        }
+        highlightActiveAreaCard(match.pincode);
+      } else {
+        if (feedback) {
+          feedback.className = "text-[11px] font-bold text-amber-700 mt-1";
+          feedback.textContent = "PIN not in active route yet. We will verify manually on WhatsApp.";
+        }
+      }
+    }
+
+    // When an area card is tapped
+    function selectDeliveryArea(areaName, pincode, scrollDown = true) {
+      const pinField = document.getElementById('cust-pin');
+      const areaDropdown = document.getElementById('cust-area');
+      const checkerInput = document.getElementById('pincode-input');
+
+      if (pinField) pinField.value = pincode;
+      if (checkerInput) checkerInput.value = pincode;
+      if (areaDropdown) areaDropdown.value = areaName;
+
+      syncPinWithArea(pincode);
+      highlightActiveAreaCard(pincode);
+
+      if (scrollDown) {
+        scrollToOrderForm();
+      }
+    }
+
+    // Dropdown change syncs PIN
+    function handleAreaDropdownChange(areaName) {
+      const matched = BRAND_CONFIG.deliveryAreas.find(a => a.name === areaName && a.active);
+      if (matched) {
+        const pinField = document.getElementById('cust-pin');
+        if (pinField) pinField.value = matched.pincode;
+        syncPinWithArea(matched.pincode);
+      }
+    }
+
+    function highlightActiveAreaCard(pincode) {
+      // Clear previous active states
+      document.querySelectorAll('#delivery-areas-grid button').forEach(btn => {
+        btn.classList.remove('ring-2', 'ring-forest-800');
+      });
+      const targetCard = document.getElementById(`area-card-${pincode}`);
+      if (targetCard) {
+        targetCard.classList.add('ring-2', 'ring-forest-800');
+      }
+    }
+
+    /* ============================================================
+       PACK SIZE & QUANTITY CONTROLLERS
+    ============================================================ */
+    function selectPackSize(size) {
+      selectedPack = size;
+      
+      const p500 = document.getElementById('btn-pack-500');
+      const p1000 = document.getElementById('btn-pack-1000');
+      const fp500 = document.getElementById('form-pack-500');
+      const fp1000 = document.getElementById('form-pack-1000');
+
+      if (size === '500 mL') {
+        if (p500) p500.className = "py-3 px-4 rounded-xl border-2 border-forest-800 bg-cream-100 font-bold text-forest-950 text-sm flex items-center justify-between shadow-xs transition-colors cursor-pointer";
+        if (p1000) p1000.className = "py-3 px-4 rounded-xl border border-cream-300 bg-white font-bold text-charcoal-800 hover:border-forest-800 text-sm flex items-center justify-between transition-colors cursor-pointer";
+        if (fp500) fp500.className = "flex-1 py-2 px-3 rounded-lg border-2 border-forest-800 bg-white text-xs font-bold text-forest-950 cursor-pointer";
+        if (fp1000) fp1000.className = "flex-1 py-2 px-3 rounded-lg border border-cream-300 bg-cream-50 text-xs font-bold text-charcoal-800 cursor-pointer";
+      } else {
+        if (p500) p500.className = "py-3 px-4 rounded-xl border border-cream-300 bg-white font-bold text-charcoal-800 hover:border-forest-800 text-sm flex items-center justify-between transition-colors cursor-pointer";
+        if (p1000) p1000.className = "py-3 px-4 rounded-xl border-2 border-forest-800 bg-cream-100 font-bold text-forest-950 text-sm flex items-center justify-between shadow-xs transition-colors cursor-pointer";
+        if (fp500) fp500.className = "flex-1 py-2 px-3 rounded-lg border border-cream-300 bg-cream-50 text-xs font-bold text-charcoal-800 cursor-pointer";
+        if (fp1000) fp1000.className = "flex-1 py-2 px-3 rounded-lg border-2 border-forest-800 bg-white text-xs font-bold text-forest-950 cursor-pointer";
+      }
+    }
+
+    function updateProductQty(delta) {
+      let qty = productQuantity + delta;
+      if (qty < 1) qty = 1;
+      if (qty > 20) qty = 20;
+      
+      productQuantity = qty;
+      formQuantity = qty;
+
+      const pDisplay = document.getElementById('product-quantity-display');
+      const fDisplay = document.getElementById('form-quantity-display');
+      if (pDisplay) pDisplay.textContent = qty;
+      if (fDisplay) fDisplay.textContent = qty;
+    }
+
+    function scrollToOrderForm() {
+      const section = document.getElementById('order-form-section');
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+        const nameField = document.getElementById('cust-name');
+        if (nameField) nameField.focus();
+      }
+    }
+
+    function syncAndNavigateToOrder() {
+      scrollToOrderForm();
+    }
+
+    /* ============================================================
+       WHATSAPP DISPATCH ENGINE (ONE CONSISTENT FLOW)
+    ============================================================ */
+    function openDirectWhatsApp() {
+      const defaultText = `Hello DESI MILK WALA,\nI would like to order milk. Please share the available options.`;
+      const url = `https://wa.me/${BRAND_CONFIG.whatsappNumber}?text=${encodeURIComponent(defaultText)}`;
+      window.open(url, '_blank');
+    }
+
+    function handleOrderSubmit(event) {
+      event.preventDefault();
+
+      const name = document.getElementById('cust-name').value.trim();
+      const mobile = document.getElementById('cust-mobile').value.trim();
+      const pin = document.getElementById('cust-pin').value.trim();
+      const area = document.getElementById('cust-area').value.trim();
+      const address = document.getElementById('cust-address').value.trim();
+      const landmark = document.getElementById('cust-landmark').value.trim() || 'Not specified';
+      const notes = document.getElementById('order-notes').value.trim() || 'None';
+
+      // Check if area is main hub
+      const areaObj = BRAND_CONFIG.deliveryAreas.find(a => a.name === area);
+      const isMainHub = areaObj && areaObj.isMainHub;
+      const areaLine = isMainHub ? `${area} (MAIN HUB)` : (area || 'Siliguri');
+
+      // Structured pre-filled WhatsApp message as specified
+      const message = 
+`Hello DESI MILK WALA,
+I want to place a milk order.
+Name: ${name}
+Mobile: ${mobile}
+PIN Code: ${pin}
+Delivery Area: ${areaLine}
+Address: ${address}
+Landmark: ${landmark}
+Milk Pack: ${selectedPack}
+Quantity: ${formQuantity} Bottle${formQuantity > 1 ? 's' : ''}
+Notes: ${notes}
+Please confirm my order.
+Thank you.`;
+
+      const whatsappUrl = `https://wa.me/${BRAND_CONFIG.whatsappNumber}?text=${encodeURIComponent(message)}`;
+      window.open(whatsappUrl, '_blank');
+    }
+
+    // Initialize areas on page ready
+    document.addEventListener('DOMContentLoaded', () => {
+      renderDeliveryAreas();
+      // Set default hub in dropdown
+      const mainHub = BRAND_CONFIG.deliveryAreas.find(a => a.isMainHub);
+      if (mainHub) {
+        const areaDropdown = document.getElementById('cust-area');
+        const pinInput = document.getElementById('cust-pin');
+        if (areaDropdown) areaDropdown.value = mainHub.name;
+        if (pinInput) pinInput.value = mainHub.pincode;
+        syncPinWithArea(mainHub.pincode);
+      }
+    });
+  </script>
+</body>
+</html>
